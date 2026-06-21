@@ -16,15 +16,19 @@ double calculateAverage(const vector<double>& marks) {
 }
 
 char calculateGrade(double average) {
-    if (average >= 80) return 'A';
-    if (average >= 70) return 'B';
-    if (average >= 60) return 'C';
+    if (average >= 90) return 'A+';
+    if (average >= 85) return 'A';
+    if (average >= 80) return 'B+';
+    if (average >= 75) return 'B';
+    if (average >= 70) return 'C+';
+    if (average >= 65) return 'C';
+    if (average >= 60) return 'D+';
     if (average >= 50) return 'D';
     return 'F';
 }
 
 int main() {
-    Student student{"Arko", {85, 90, 78, 88}};
+    Student student{"Artho", {85, 90, 78, 88}};
     double average = calculateAverage(student.marks);
 
     cout << "Student: " << student.name << endl;
